@@ -42,10 +42,12 @@ ifeq ($(OSTYPE),linux)
 endif
 
 # assume this is normally run in the main Paho directory
+#源代码路径
 ifndef srcdir
   srcdir = src
 endif
 
+#输出路径
 ifndef blddir
   blddir = build/output
 endif
@@ -61,15 +63,19 @@ endif
 ifndef docdir_work
   docdir_work = $(blddir)/../doc
 endif
-
+#安装路径
 ifndef prefix
 	prefix = /usr/local
 endif
 
+#可执行文件路径
 ifndef exec_prefix
 	exec_prefix = ${prefix}
 endif
-
+#bin文件路径 在安装路径下的/bin
+bindir = $(exec_prefix)/bin
+#头文件路径
+bindir = $(exec_prefix)/bin
 bindir = $(exec_prefix)/bin
 includedir = $(prefix)/include
 libdir = $(exec_prefix)/lib
